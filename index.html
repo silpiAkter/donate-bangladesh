@@ -8,6 +8,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <header class="sticky">
+        <!-- nav section start -->
+        <nav class="bg-[#f9f7f3] py-6 drop-shadow-lg">
+            <div class="navbar max-w-[1140px] mx-auto">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <button class=" rounded-lg bg-[#B4F461] text-xl font-semibold text-center py-3 px-8">Blog</button>
+                  </div>
+                </div>
+                <div class="navbar-center">
+                    <img src="assets/logo.png" alt="" width="40" height="20">
+                  <a class="text-xl font-semibold ps-5">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="stats bg-transparent">
+                        <div class="stat flex justify-center items-center">
+                          <div class="">
+                            <img src="assets/coin.png" alt="">
+                          </div>
+                          <div id="account-balance" class="stat-value text-xl font-medium text-slate-600">5500 BDT</div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </nav>
+        <!-- nav section end -->
+        <div class="flex justify-center items-center gap-5 pt-20">
+            <button class="btn bg-[#B4F461] btn-lg">Donate</button>
+            <button class="btn border-2 border-gray-950 btn-lg">History</button>
+        </div>
+        <div class="divider"></div>
+    </header>
+    <main class="max-w-[1140px] mx-auto">
+        <!-- donate for flood start-->
+        <div class="card card-side bg-base-100 shadow-lg p-8">
+            <figure class="">
+              <img src="assets/feni.png" alt="">
+            </figure>
+            <div class="card-body w-2/4 space-y-7">
+                <div class="stat-value flex justify-left gap-2 items-center text-base font-normal">
+                    <img src="assets/coin.png" alt="" width="" height="">
+                    0 BDT
+                </div>
+              <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+              <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+              <div>
+                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs" />
+              </div>
+              <div class="w-full bg-[#B4F461] rounded-lg flex justify-center py-4">
+                <button class="">Donate Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- donate for flood end-->
+          
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
