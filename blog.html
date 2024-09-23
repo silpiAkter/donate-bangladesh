@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="max-w-[1140px] mx-auto space-y-5 my-12">
+        <h2 class="text-4xl font-extrabold text-left p-5 shadow-lg rounded-lg">FAQ</h2>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+              <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page in a tree-like format, allowing programs and scripts to dynamically access and manipulate its content, structure, and style.</p>
+              <ol type="1" class="space-y-5">
+                <h3>5 key points about the DOM:</h3>
+                <li>1. <strong>Tree Structure:</strong> The DOM organizes an HTML or XML document as a tree of nodes. Each node represents part of the document, such as an element, an attribute, or a piece of text. For example, an HTML page with a tag would have those tags as nodes connected in a hierarchy.</li>
+                <li>2. <strong>Nodes and Objects:</strong> Every element in the HTML document (like div, p, a) is represented as an object, which can be accessed and manipulated using scripting languages such as JavaScript. Text within elements and attributes are also treated as objects.</li>
+                <li>3. <strong>Access and Manipulation:</strong> Through the DOM, you can change the content, structure, and style of a web page without requiring a full reload. For example, you can add or remove elements, modify text, or dynamically update styles.</li>
+                <li>4. <strong>Dynamic Interaction:</strong> JavaScript is often used to interact with the DOM. Common operations include getting or setting the value of elements, listening for user events (such as clicks), and modifying the appearance or content of the web page in response to these events.</li>
+                <li>5. <strong>Standardized Interface:</strong> The DOM is a platform- and language-neutral interface, standardized by the World Wide Web Consortium (W3C), ensuring compatibility across browsers and environments.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p>Selecting elements from the DOM is a common task in web development. JavaScript provides various methods to access and manipulate elements based on their tag name, class, ID, attributes, and more. Below are the most commonly used methods:</p>
+              <ul class="space-y-5 mt-5">
+                <li>1. <strong>Selecting by ID:</strong>
+                    <br>
+                    Use the document.getElementById() method to select an element by its unique id attribute.</li>
+                <li>2. <strong>Selecting by Class Name:</strong>
+                    <br>
+                    Use document.getElementsByClassName() to select elements by their class attribute. This method returns a live HTMLCollection (similar to an array).</li>
+                <li>3. <strong>Selecting by Tag Name:</strong>
+                    <br>
+                    Use document.getElementsByTagName() to select elements by their tag name (e.g., div, p, ul). This method also returns a live HTMLCollection.</li>
+                <li>4. <strong>Selecting by CSS Selector:</strong>
+                    <br>
+                    Use document.querySelector() to select the first element that matches a CSS selector (e.g., #id, .class, div, etc.).
+                </li>
+                <li>5. <strong>Selecting Multiple Elements by CSS Selector:</strong>
+                    <br>
+                    Use document.querySelectorAll() to select all elements that match a CSS selector. This returns a static NodeList (which can be iterated).
+                </li>
+                <li>6. <strong>Selecting by Attribute:</strong>
+                    <br>
+                    You can use querySelector or querySelectorAll to select elements by their attributes. For example, selecting elements with a specific attribute (like data-* attributes).
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>
+                Event delegation is a pattern in DOM manipulation where a single event listener is added to a parent element to manage events triggered by its child elements, rather than adding individual listeners to each child. This is done by taking advantage of event bubbling, which allows an event to propagate (or "bubble up") through the DOM hierarchy, triggering event handlers on parent elements.</p>
+                <h3 class="font-bold">How Event Delegation Works:</h3>
+                <p>When an event occurs on an element (e.g., a click on a button inside a div), the event is first captured by the target element (the button) and then "bubbles up" to its parent elements (the div, then the body, etc.) until it reaches the root of the DOM tree (document). With event delegation, you attach an event listener to a common ancestor of the target elements. When the event bubbles up to the parent, you can check the event.target to determine which child triggered the event and handle it accordingly.</p>
+            </div>
+        </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>To manipulate an element's attributes in the DOM, use getAttribute() to retrieve, setAttribute() to modify, and removeAttribute() to delete attributes. For common attributes like id and className, modify them directly (e.g., element.id = 'newId').</p>
+              <p>To change an element’s styles, use the style property for inline styles (e.g., element.style.color = 'red') or manipulate classes using classList.add(), remove(), or toggle().</p>
+              <p>Data attributes (e.g., data-*) can be accessed and modified via dataset (e.g., element.dataset.user = '123').</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

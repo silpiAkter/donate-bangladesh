@@ -6,15 +6,21 @@
     <title>Donate Bangladesh</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .active{
+      background-color: #B4F461;
+      color: #fff;
+    }
+  </style>
 </head>
-<body>
-    <header class="sticky">
+<body class="">
+    <header class="sticky top-0 bottom-0 z-10 bg-gray-100 bg-opacity-90">
         <!-- nav section start -->
         <nav class="bg-[#f9f7f3] py-6 drop-shadow-lg">
             <div class="navbar max-w-[1140px] mx-auto">
                 <div class="navbar-start">
                   <div class="dropdown">
-                    <button class=" rounded-lg bg-[#B4F461] text-xl font-semibold text-center py-3 px-8">Blog</button>
+                    <button id="blog-page" class=" rounded-lg bg-[#B4F461] text-xl font-semibold text-center py-3 px-8">Blog</button>
                   </div>
                 </div>
                 <div class="navbar-center">
@@ -35,33 +41,60 @@
         </nav>
         <!-- nav section end -->
         <div class="flex justify-center items-center gap-5 pt-20">
-            <button class="btn bg-[#B4F461] btn-lg">Donate</button>
-            <button class="btn border-2 border-gray-950 btn-lg">History</button>
+          <!-- donation status -->
+            <button id="donation" class="btn active btn-lg rounded-lg">Donate</button>
+            <!-- history btn -->
+            <button id="history" class="btn active rounded-lg btn-lg">History</button>
         </div>
-        <div class="divider"></div>
+        <!-- donation btn -->
+        <div id="donation-status" class="hidden">
+          <h2 class="text-2xl font-semibold text-center p-4">Donation Status</h2>
+          <div id="donation-add" class="text-center">
+
+          </div>
+        </div>
+        <!-- history status -->
+        <div id="history-status" class="hidden">
+          <h2 class="text-2xl font-semibold text-center p-4">Transaction History</h2>
+          <div id="transaction-history" class="text-center">
+
+          </div>
+        </div>
+        <div class="divider p-0"></div>
     </header>
-    <main class="max-w-[1140px] mx-auto mb-20 p-5">
-        <!-- donate for flood start-->
+    <main class="max-w-[1140px] mx-auto mb-20 p-5 top-0 space-y-8">
+        <!-- card - 1-->
         <div class="card lg:card-side bg-base-100 shadow-xl">
             <figure class="p-5">
               <img class="w-full" src="assets/noakhali.png" alt="">
             </figure>
             <div class="card-body lg:w-2/4 space-y-7">
                 <div class="stat-value flex justify-left gap-2 items-center text-base font-normal">
-                    <img src="assets/coin.png" alt="" width="" height="">
-                    0 BDT
+                    <img src="assets/coin.png" alt="" width="16" height="16">
+                    <h3 id="add-money1" class="font-normal text-base text-gray-700">0 BDT</h3>
                 </div>
               <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
               <p class="font-light text-base text-[#111111] opacity-70">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
               <div class="w-full input input-bordered rounded-lg flex justify-left text-left p-4">
-                <input type="text" placeholder="Write Donation Amount" />
+                <input id="input-field1" type="text" placeholder="Write Donation Amount" />
               </div>
-              <div class="w-full bg-[#B4F461] rounded-lg flex justify-center py-4">
-                <button class="">Donate Now</button>
+              <div class="flex justify-center items-center">
+                <button id="donate-btn1" class="bg-[#B4F461] rounded-lg flex justify-center py-4 px-8" onclick="my_modal_5.showModal()">Donate</button>
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                  <div class="modal-box">
+                    <h3 class="text-lg font-bold">Congratulation!</h3>
+                    <p class="py-4">Your donation is added successfully</p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </div>
             </div>
           </div>
-          <!-- donate for flood end-->
+          <!-- card -2-->
           <div class="card lg:card-side bg-base-100 shadow-xl">
             <figure class="p-5">
               <img class="w-full" src="assets/feni.png" alt="">
@@ -81,7 +114,7 @@
               </div>
             </div>
           </div>
-          <!--  -->
+          <!-- card -3 -->
           <div class="card lg:card-side bg-base-100 shadow-xl">
             <figure class="p-5">
               <img class="w-full" src="assets/quota-protest.png" alt="">
@@ -100,11 +133,14 @@
                 <button class="">Donate Now</button>
               </div>
             </div>
-          </div>
-          
-    </main>
-    <footer>
+          </div> 
 
-    </footer>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/mainBalance.js"></script>
+    <script src="js/addMoney1.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/features.js"></script>
+    <script defer src="js/btn.js"></script>
 </body>
 </html>
