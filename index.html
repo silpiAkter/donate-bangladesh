@@ -50,7 +50,7 @@
             </div>
         </nav>
         <!-- nav section end -->
-        <div class="flex justify-center items-center gap-5 pt-20">
+        <div class="flex justify-center items-center gap-5  pt-7 lg:pt-20">
           <!-- donation btn -->
             <button id="donation" class="btn active btn-lg border-2 border-gray-300 rounded-lg">Donate</button>
             <!-- history btn -->
@@ -59,20 +59,20 @@
 
         <!-- history status -->
         <div id="history-status" class="hidden max-w-screen-xl mx-auto p-5">
-          <h2 class="text-2xl font-semibold p-4">Transaction History</h2>
           <div id="transaction-history">
 
           </div>
         </div>
-        <div class="divider p-0"></div>
     </header>
-    <main id="donation-status" class="max-w-[1140px] mx-auto mb-20 p-5 top-0">
+    <main id="donation-status" class="max-w-[1140px] mx-auto  p-5">
         <!-- card - 1-->
-        <div class="card lg:card-side bg-base-100 border border-gray-400 mb-5 px-8 py-0">
-            <figure class="">
-              <img class="max-w-full" src="assets/noakhali.png" alt="" width="522" height="389">
+        <div class="card lg:card-side bg-base-100 border border-gray-400 mb-5 lg:px-8 py-5 lg:py-8">
+          <!-- card image -->
+            <figure class="g:w-[522px] lg:h-[389px] ">
+              <img class="max-w-full" src="assets/noakhali.png" alt="">
             </figure>
-            <div class="card-body lg:w-2/4 space-y-4 ">
+            <!-- card content -->
+            <div class="card-body lg:w-[522px] lg:h-[389px] space-y-4 lg:pt-0">
                 <div class="stat-value flex justify-left gap-2 items-center text-base font-normal text-gray-600 bg-gray-100 rounded-lg px-4 py-1 w-40">
                     <img src="assets/coin.png" alt="" width="16" height="16">
                     <span id="add-money1">0 </span>BDT
@@ -82,6 +82,7 @@
               <div class="w-full input input-bordered rounded-lg flex justify-left text-left p-4">
                 <input id="input-field1" class="w-full" type="text" placeholder="Write Donation Amount" />
               </div>
+              <!-- card modal -->
               <div class="bg-[#B4F461] rounded-lg flex justify-center items-center">
                 <button id="donate-btn1" class=" rounded-lg flex justify-center py-3 px-8 font-semibold text-white">Donate</button>
                 <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
@@ -102,11 +103,13 @@
           </div>
 
           <!-- card -2-->
-          <div class="card lg:card-side bg-base-100 border border-gray-400 mb-5 px-8 py-0">
-            <figure class="p-5">
-              <img class="max-w-full" src="assets/feni.png" alt="" width="522" height="389">
+          <div class="card lg:card-side bg-base-100 border border-gray-400 mb-5 py-5 lg:px-8 lg:py-8">
+            <!-- card image -->
+            <figure class="px-6 py-2 lg:p-1 lg:w-[522px] lg:h-[441px]">
+              <img class="w-full" src="assets/feni.png" alt="" width="522" height="389">
             </figure>
-            <div class="card-body lg:w-2/4 space-y-4">
+            <!-- card content -->
+            <div class="card-body lg:w-[522px] lg:h-[441px] space-y-2 lg:pt-0">
                 <div class="stat-value flex justify-left gap-2 items-center text-base font-normal bg-gray-100 rounded-lg px-4 py-1 w-40 text-gray-600">
                     <img src="assets/coin.png" alt="" width="17" height="16">
                     <span id="add-money2">0 </span>BDT
@@ -116,8 +119,8 @@
               <div class="w-full input input-bordered rounded-lg flex justify-left text-left p-4">
                 <input id="input-field2" class="w-full" type="text" placeholder="Write Donation Amount" />
               </div>
+              <!-- card modal -->
               <div class="bg-[#B4F461] rounded-lg flex justify-center">
-                <!-- <button id="donate-btn2"  class="bg-[#B4F461] rounded-lg flex justify-center py-3 px-8 font-semibold text-white">Donate Now</button> -->
                 <button id="donate-btn2" class=" rounded-lg flex justify-center py-3 px-8 font-semibold text-white">Donate</button>
                 <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
                   <div class="modal-box text-center">
@@ -137,11 +140,13 @@
             </div>
           </div>
           <!-- card -3 -->
-          <div class="card lg:card-side bg-base-100 border border-gray-400 mb-5 px-8 py-0">
-            <figure class="p-5">
-              <img class="max-w-full" src="assets/quota-protest.png" alt="" width="522" height="389">
+          <div class="card lg:card-side bg-base-100 border border-gray-400 mb-5 lg:px-8 lg:py-8">
+            <!-- card image -->
+            <figure class="px-0 py-6 lg:w-[522px] lg:h-[467px]">
+              <img class="w-full" src="assets/quota-protest.png" alt="" width="522" height="389">
             </figure>
-            <div class="card-body lg:w-2/4 space-y-4">
+            <!-- card content -->
+            <div class="card-body lg:w-[522px] lg:h-[467px] space-y-2 lg:pt-0">
                 <div class="stat-value flex justify-left gap-2 items-center text-base font-normal bg-gray-100 rounded-lg px-4 py-1 w-40 text-gray-600">
                     <img src="assets/coin.png" alt="" width="17" height="16">
                     <span id="add-money3">0 </span>BDT
@@ -151,8 +156,8 @@
               <div class="w-full input input-bordered rounded-lg flex justify-left text-left p-4">
                 <input id="input-field3" class="w-full" type="text" placeholder="Write Donation Amount" />
               </div>
+              <!-- modal button -->
               <div class="bg-[#B4F461] rounded-lg flex justify-center">
-                <!-- <button id="donate-btn3" class="bg-[#B4F461] rounded-lg flex justify-center py-3 px-8 font-semibold text-white">Donate Now</button> -->
                 <button id="donate-btn3" class=" rounded-lg flex justify-center py-3 px-8 font-semibold text-white">Donate</button>
                 <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
                   <div class="modal-box text-center">
@@ -172,6 +177,9 @@
           </div> 
 
     </main>
+    <footer class="bg-[#f9f7f3] h-20 block">
+
+    </footer>
     <script src="js/utilities.js"></script>
     <script src="js/addMoney1.js"></script>
     <script src="js/addMoney2.js"></script>

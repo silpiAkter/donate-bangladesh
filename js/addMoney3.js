@@ -2,18 +2,25 @@ document.getElementById('donate-btn3').addEventListener('click', function(event)
     event.preventDefault();
     
     const inputField = getInputFieldById('input-field3');
-    const mainBalance2 = getTextFieldById('account-balance');
+    const mainBalance3 = getTextFieldById('account-balance');
     const title = getDonateTitle('donate-title3');
     
-        const addMoney = getTextFieldById('add-money3');
-        const addDonate = addMoney + inputField;
-
-        if(isNaN(inputField)){
+        if(isNaN(inputField) || inputField <= 0){
             alert('Invalid Input');
             return;
         }
 
+        if(inputField > mainBalance3){
+            alert('insufiicient balance');
+            return;
+        }
+
+        const addMoney = getTextFieldById('add-money3');
+        const addDonate = addMoney + inputField;
+
+        
         document.getElementById('add-money3').innerText = addDonate;
+
 
         const now = new Date();
         const year = now.getFullYear();
@@ -42,10 +49,6 @@ document.getElementById('donate-btn3').addEventListener('click', function(event)
 
 })
 
-const modalNoTree = document.getElementById('my_modal_3')
-document.getElementById('donate-btn3').addEventListener('click', function(){
-    modalNoTree.showModal();
-})
 
 document.getElementById('donate-btn3').addEventListener('click', function(event){
     event.preventDefault();
@@ -63,5 +66,21 @@ document.getElementById('donate-btn3').addEventListener('click', function(event)
         document.getElementById('account-balance').innerText = newBalance;
         
 
+})
+
+const modal_3 = document.getElementById('my_modal_3');
+const donateBtn_3 = document.getElementById('donate-btn3');
+const donateInput_3 = document.getElementById('input-field3');
+const mainBalanc = getTextFieldById('account-balance');
+
+donateBtn_3.addEventListener('click', function(){
+    const donation = donateInput_3.value;
+    if(isNaN(donation) || donation <= 0 || donation >= mainBalance){
+        alert('Please enter a valid donation amount');
+
+    }
+    else{
+        modal.showModal();
+    }
 })
 
