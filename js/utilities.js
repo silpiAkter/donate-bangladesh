@@ -24,3 +24,8 @@ function setActiveBtn(id){
     document.getElementById('history').classList.remove('active');
     document.getElementById(id).classList.add('active')
 }
+
+function getDonateTitle(id){
+    const title = document.getElementById(id).innerText;
+    return title;
+}

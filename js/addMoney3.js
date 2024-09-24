@@ -1,19 +1,19 @@
-document.getElementById('donate-btn1').addEventListener('click', function(event){
+document.getElementById('donate-btn3').addEventListener('click', function(event){
     event.preventDefault();
     
-    const inputField = getInputFieldById('input-field1');
-    const mainBalance = getTextFieldById('account-balance');
+    const inputField = getInputFieldById('input-field3');
+    const mainBalance2 = getTextFieldById('account-balance');
     const title = getDonateTitle('donate-title');
-
-        const addMoney = getTextFieldById('add-money1');
+    
+        const addMoney = getTextFieldById('add-money3');
         const addDonate = addMoney + inputField;
 
-            if(isNaN(inputField)){
-                alert('Invalid Input');
-                return;
-            }
+        if(isNaN(inputField)){
+            alert('Invalid Input');
+            return;
+        }
 
-        document.getElementById('add-money1').innerText = addDonate;
+        document.getElementById('add-money3').innerText = addDonate;
 
         const now = new Date();
         const year = now.getFullYear();
@@ -25,7 +25,7 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
         const seconds = String(now.getSeconds()).padStart(2, '0');
 
         const dateTimeString = `Date: ${day}/${month}/${year} Time: ${hours}-${minutes}-${seconds}`;
-
+        
 
         const div = document.createElement('div');
         div.innerHTML = `
@@ -38,16 +38,16 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
         div.style.backgroundColor = 'white';
         div.style.marginBottom = '10px';
         console.log(div);
-
         document.getElementById('transaction-history').appendChild(div);
 
+    
 
 })
 
-document.getElementById('donate-btn1').addEventListener('click', function(event){
+document.getElementById('donate-btn3').addEventListener('click', function(event){
     event.preventDefault();
 
-    const mainBalance = getInputFieldById('input-field1');
+    const mainBalance = getInputFieldById('input-field3');
     
         const balance  = getTextFieldById('account-balance');
         const newBalance = balance - mainBalance;
@@ -61,3 +61,4 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
         
 
 })
+
