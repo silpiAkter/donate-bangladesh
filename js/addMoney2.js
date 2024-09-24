@@ -3,7 +3,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(event)
     
     const inputField = getInputFieldById('input-field2');
     const mainBalance2 = getTextFieldById('account-balance');
-    const title = getDonateTitle('donate-title');
+    const title = getDonateTitle('donate-title2');
     
         const addMoney = getTextFieldById('add-money2');
         const addDonate = addMoney + inputField;
@@ -43,6 +43,11 @@ document.getElementById('donate-btn2').addEventListener('click', function(event)
 
 })
 
+const modalNoTow = document.getElementById('my_modal_2')
+document.getElementById('donate-btn2').addEventListener('click', function(){
+    modalNoTow.showModal();
+})
+
 document.getElementById('donate-btn2').addEventListener('click', function(event){
     event.preventDefault();
 
@@ -52,7 +57,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(event)
         const newBalance = balance - mainBalance;
 
         if(balance <= mainBalance ){
-            alert('You have sufficient balance');
+            alert('YYou have not sufficient balance in your account');
             return;
         }
 

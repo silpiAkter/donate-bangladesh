@@ -29,3 +29,4 @@ function getDonateTitle(id){
     const title = document.getElementById(id).innerText;
     return title;
 }
+

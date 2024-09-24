@@ -5,16 +5,23 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
     const mainBalance = getTextFieldById('account-balance');
     const title = getDonateTitle('donate-title');
 
-        const addMoney = getTextFieldById('add-money1');
-        const addDonate = addMoney + inputField;
-
-            if(isNaN(inputField)){
+        if(inputField <= mainBalance || inputField === 'number'){
+            if(isNaN(inputField) || inputField < 0){
                 alert('Invalid Input');
                 return;
             }
 
-        document.getElementById('add-money1').innerText = addDonate;
+            const addMoney = getTextFieldById('add-money1');
+            const addDonate = addMoney + inputField;
 
+            document.getElementById('add-money1').innerText = addDonate;
+            
+        }
+        else{
+            alert('Please try again');
+            return;
+        }
+     
         const now = new Date();
         const year = now.getFullYear();
         const month = String(now.getMonth() + 1).padStart(2, '0');
@@ -53,11 +60,15 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
         const newBalance = balance - mainBalance;
 
         if(balance <= mainBalance ){
-            alert('You have sufficient balance');
+            alert('You have not sufficient balance in your account');
             return;
         }
 
         document.getElementById('account-balance').innerText = newBalance;
         
 
+})
+const modal = document.getElementById('my_modal_1')
+document.getElementById('donate-btn1').addEventListener('click', function(){
+    modal.showModal();
 })
