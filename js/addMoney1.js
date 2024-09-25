@@ -5,7 +5,7 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
     const mainBalance = getTextFieldById('account-balance');
     const title = getDonateTitle('donate-title');
 
-        if(isNaN(inputField) || inputField <= 0){
+        if(!isNaN(inputField) && inputField < 0 && mainBalance >= inputField){
             alert('Invalid Input');
             return;
         }
@@ -13,6 +13,9 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
         if(inputField > mainBalance){
             alert('insufiicient balance');
             return;
+        }
+        else{
+            console.error('Invalid input values');
         }
 
         const addMoney = getTextFieldById('add-money1');
@@ -65,6 +68,7 @@ document.getElementById('donate-btn1').addEventListener('click', function(event)
             document.getElementById('account-balance').innerText = newBalance;
         }
         else{
+            console.error('Invalid input values');
             return;
         }
   
