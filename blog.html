@@ -14,15 +14,8 @@
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
             <div class="collapse-content">
+              <p>DOM stands for Document Object Model and is a programming interface that allows us to create, change or remove elements from the document. We can also add events to these elements to make our page more dynamic.</p>
               <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page in a tree-like format, allowing programs and scripts to dynamically access and manipulate its content, structure, and style.</p>
-              <ol type="1" class="space-y-5">
-                <h3>5 key points about the DOM:</h3>
-                <li>1. <strong>Tree Structure:</strong> The DOM organizes an HTML or XML document as a tree of nodes. Each node represents part of the document, such as an element, an attribute, or a piece of text. For example, an HTML page with a tag would have those tags as nodes connected in a hierarchy.</li>
-                <li>2. <strong>Nodes and Objects:</strong> Every element in the HTML document (like div, p, a) is represented as an object, which can be accessed and manipulated using scripting languages such as JavaScript. Text within elements and attributes are also treated as objects.</li>
-                <li>3. <strong>Access and Manipulation:</strong> Through the DOM, you can change the content, structure, and style of a web page without requiring a full reload. For example, you can add or remove elements, modify text, or dynamically update styles.</li>
-                <li>4. <strong>Dynamic Interaction:</strong> JavaScript is often used to interact with the DOM. Common operations include getting or setting the value of elements, listening for user events (such as clicks), and modifying the appearance or content of the web page in response to these events.</li>
-                <li>5. <strong>Standardized Interface:</strong> The DOM is a platform- and language-neutral interface, standardized by the World Wide Web Consortium (W3C), ensuring compatibility across browsers and environments.</li>
-              </ol>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-200">
@@ -60,9 +53,8 @@
             <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
             <div class="collapse-content">
               <p>
-                Event delegation is a pattern in DOM manipulation where a single event listener is added to a parent element to manage events triggered by its child elements, rather than adding individual listeners to each child. This is done by taking advantage of event bubbling, which allows an event to propagate (or "bubble up") through the DOM hierarchy, triggering event handlers on parent elements.</p>
-                <h3 class="font-bold">How Event Delegation Works:</h3>
-                <p>When an event occurs on an element (e.g., a click on a button inside a div), the event is first captured by the target element (the button) and then "bubbles up" to its parent elements (the div, then the body, etc.) until it reaches the root of the DOM tree (document). With event delegation, you attach an event listener to a common ancestor of the target elements. When the event bubbles up to the parent, you can check the event.target to determine which child triggered the event and handle it accordingly.</p>
+                Event delegation is a technique in the DOM where a single event listener is attached to a parent element to handle events from its child elements. Instead of adding individual listeners to each child, the event bubbles up from the target element to the parent, where it’s handled.</p>
+                <p>This is useful because it improves performance by reducing the number of event listeners, especially in dynamic lists or elements that are frequently added or removed. It also simplifies code, ensuring all future child elements are automatically handled without needing additional listeners. For example, using addEventListener on a parent element.</p>
             </div>
         </div>
           <div class="collapse collapse-arrow bg-base-200">

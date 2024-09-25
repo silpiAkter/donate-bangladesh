@@ -52,18 +52,23 @@ document.getElementById('donate-btn2').addEventListener('click', function(event)
 document.getElementById('donate-btn2').addEventListener('click', function(event){
     event.preventDefault();
 
-    const mainBalance = getInputFieldById('input-field2');
-    
-        const balance  = getTextFieldById('account-balance');
-        const newBalance = balance - mainBalance;
+    const mainBalance2 = getInputFieldById('input-field2');
 
-        if(balance <= mainBalance ){
-            alert('You have not sufficient balance in your account');
+        if(typeof mainBalance2 === 'number'){
+            const balance  = getTextFieldById('account-balance');
+            const newBalance = balance - mainBalance2;
+
+            if(balance <= mainBalance2 ){
+                alert('You have not sufficient balance in your account');
+                return;
+            }
+
+            document.getElementById('account-balance').innerText = newBalance;
+        }
+        else{
             return;
         }
-
-        document.getElementById('account-balance').innerText = newBalance;
-        
+               
 })
 
 const modal_2 = document.getElementById('my_modal_2');
